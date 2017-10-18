@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>タイトル</title>
+</head>
+<body>
+<form>
+    <input type="text" id="search">
+</form>
+<table>
+    <tbody>
+    <tr>
+        <td>text1</td>
+        <td>AAA</td>
+    </tr>
+    <tr>
+        <td>text2</td>
+        <td>BBB</td>
+    </tr>
+    <tr>
+        <td>text3</td>
+        <td>CCC</td>
+    </tr>
+    </tbody>
+</table>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.4.0/jquery.quicksearch.min.js"></script>
+<script>
+    $("input#search").quicksearch("table tbody tr", {
+        "onAfter": function () {
+            if ($(this).val() === "") {
+                $("table tbody tr").css({display: "none"});
+            }
+        }
+    });
+</script>
+</body>
+</html>
