@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/datatables.css"/>
+    <link rel="stylesheet" type="text/css" href="css/set.css"/>
       <script src="js/jquery-3.2.1.min.js"></script>
-      <script src="js/exif.js"></script>
-      <script src="js/json.js"></script>
       <script src="js/jquery.lazyload.min.js"></script>
       <script type="text/javascript" src="js/datatables.js"></script>
 
@@ -17,6 +16,11 @@
 
       <script>
       jQuery(function($){
+          $.extend( $.fn.dataTable.defaults, {
+              language: {
+              url: "http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Japanese.json"
+            }
+          });
           $("#contents-table").DataTable({ordering: false,});
       });
       </script>
@@ -25,20 +29,22 @@
 
   </head>
   <body>
-    <table id="contents-table">
+    <table id="contents-table" class=table1_2>
       <thead>
         <tr>
-          <th>写真</th><th>年</th><th>月</th><th>日</th><th>時間</th>
+          <th>写真</th><th>年</th><th>月</th><th>日</th><th>時間</th><th>天気</th>
         </tr>
       </thead>
 
       <tbody>
+
         <tr>
           <td><img class="lazy" data-original="image/20160101063009.jpg" width="500"></td>
           <td>2016年</td>
           <td>01月</td>
           <td>01日</td>
           <td>06時30分</td>
+          <td>雪</td>
         </tr>
 
         <tr>
@@ -47,6 +53,7 @@
           <td>01月</td>
           <td>01日</td>
           <td>06時35分</td>
+          <td>雪</td>
         </tr>
 
         <tr>
@@ -55,6 +62,7 @@
           <td>01月</td>
           <td>01日</td>
           <td>06時40分</td>
+          <td>雪</td>
         </tr>
 
         <tr>
@@ -63,6 +71,7 @@
           <td>01月</td>
           <td>01日</td>
           <td>06時45分</td>
+          <td>雪</td>
         </tr>
 
         <tr>
@@ -71,6 +80,7 @@
           <td>01月</td>
           <td>01日</td>
           <td>06時50分</td>
+          <td>雪</td>
         </tr>
 
         <tr>
@@ -79,6 +89,7 @@
           <td>01月</td>
           <td>01日</td>
           <td>06時55分</td>
+          <td>雪</td>
         </tr>
 
         <tr>
@@ -87,38 +98,70 @@
           <td>01月</td>
           <td>01日</td>
           <td>07時00分</td>
+          <td>晴れ</td>
         </tr>
 
         <tr>
-          <td><img class="lazy" data-original="image/20160101071009.jpg" width="500"></td>
+          <td><img class="lazy" data-original="image/20160201063008.jpg" width="500"></td>
           <td>2016年</td>
-          <td>01月</td>
+          <td>02月</td>
           <td>01日</td>
-          <td>07時05分</td>
+          <td>06時30分</td>
+          <td>雪</td>
         </tr>
 
         <tr>
-          <td><img class="lazy" data-original="image/20160101073009.jpg" width="500"></td>
+          <td><img class="lazy" data-original="image/20160201063509.jpg" width="500"></td>
           <td>2016年</td>
-          <td>01月</td>
+          <td>02月</td>
           <td>01日</td>
-          <td>07時10分</td>
+          <td>06時35分</td>
+          <td>雪</td>
         </tr>
 
         <tr>
-          <td><img class="lazy" data-original="image/20160101073509.jpg" width="500"></td>
+          <td><img class="lazy" data-original="image/20160201064008.jpg" width="500"></td>
           <td>2016年</td>
-          <td>01月</td>
+          <td>02月</td>
           <td>01日</td>
-          <td>07時15分</td>
+          <td>06時40分</td>
+          <td>雪</td>
         </tr>
 
         <tr>
-          <td><img class="lazy" data-original="image/20160101074009.jpg" width="500"></td>
+          <td><img class="lazy" data-original="image/20160201064508.jpg" width="500"></td>
           <td>2016年</td>
-          <td>01月</td>
+          <td>02月</td>
           <td>01日</td>
-          <td>07時20分</td>
+          <td>06時45分</td>
+          <td>雪</td>
+        </tr>
+
+        <tr>
+          <td><img class="lazy" data-original="image/20160201065009.jpg" width="500"></td>
+          <td>2016年</td>
+          <td>02月</td>
+          <td>01日</td>
+          <td>06時50分</td>
+          <td>雪</td>
+        </tr>
+
+        <tr>
+          <td><img class="lazy" data-original="image/20160201065509.jpg" width="500"></td>
+          <td>2016年</td>
+          <td>02月</td>
+          <td>01日</td>
+          <td>06時55分</td>
+          <td>雪</td>
+        </tr>
+
+        <tr>
+          <td><img class="lazy" data-original="image/20160201070009.jpg" width="500"></td>
+          <td>2016年</td>
+          <td>02月</td>
+          <td>01日</td>
+          <td>07時00分</td>
+          <td>晴れ</td>
         </tr>
 
       </tbody>

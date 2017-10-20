@@ -1,0 +1,21 @@
+td {
+text-align: center;
+}
+
+<style>
+.table1_2 table {
+	width:100%;
+	margin:15px 0
+}
+.table1_2 th {
+	background-color:#505050;
+	color:#FFFFFF
+}
+.table1_2,.table1_2 th,.table1_2 td
+{
+	font-size:0.95em;
+	text-align:center;
+	padding:4px;
+	border:1px solid #dddddd;
+	border-collapse:collapse
+}
